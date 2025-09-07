@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manh Van Dang - Data Scientist & Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light grey background */
+            color: #343a40; /* Dark grey text for readability */
+        }
+        .accent-colour {
+            color: #f97316; /* Professional warm orange */
+        }
+        .accent-bg {
+            background-color: #f97316;
+        }
+        .accent-border {
+            border-color: #f97316;
+        }
+        .light-slate {
+            color: #495057; /* Slightly lighter dark grey for secondary headings */
+        }
+        .slate {
+            color: #6c757d; /* Medium grey for body text */
+        }
+        .card-bg {
+            background-color: #ffffff; /* Clean white for cards */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+        }
+        .card-bg:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        .tag {
+            background-color: #fff7ed; /* Light orange for tags */
+            color: #f97316;
+        }
+        .active-filter {
+            background-color: #f97316;
+            color: #ffffff;
+            border-color: #f97316;
+        }
+    </style>
+</head>
+<body class="leading-normal tracking-normal">
+
+    <!-- Header / Navbar -->
+    <header class="fixed w-full z-30 top-0 text-gray-800 bg-opacity-90 backdrop-blur-sm shadow-md" style="background-color: rgba(248, 249, 250, 0.85);">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="#">
+                <span class="text-xl accent-colour font-bold">MVD</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a href="#about" class="mr-5 hover:accent-colour transition duration-300 ease-in-out">About</a>
+                <a href="#skills" class="mr-5 hover:accent-colour transition duration-300 ease-in-out">Skills</a>
+                <a href="#portfolio" class="mr-5 hover:accent-colour transition duration-300 ease-in-out">Portfolio</a>
+                <a href="#contact" class="mr-5 hover:accent-colour transition duration-300 ease-in-out">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section id="home" class="container mx-auto px-6 py-20 md:py-32">
+            <div class="max-w-4xl mx-auto text-left">
+                <p class="text-lg accent-colour mb-4">Hi, my name is</p>
+                <h1 class="text-4xl md:text-7xl font-bold text-gray-900 mb-4">Manh Van Dang.</h1>
+                <h2 class="text-4xl md:text-7xl font-bold light-slate mb-8">I build solutions with data.</h2>
+                <p class="text-lg md:text-xl max-w-3xl slate mb-8">
+                    I'm a Data Scientist with app development and business administration skills. I specialise in turning complex data into actionable insights using Python, SQL, and Power BI, while also building the applications that bring those insights to life.
+                </p>
+                <a href="#portfolio" class="accent-colour border accent-border py-3 px-6 rounded-md text-lg hover:text-white hover:accent-bg transition duration-300 ease-in-out">
+                    Check out my work!
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center max-w-4xl mx-auto">
+                    <div class="md:w-2/3 md:pr-12">
+                        <p class="text-lg slate mb-4">
+                            Hello! I'm Manh. My journey into the world of data began with a BSc in Data Science from Bournemouth University, where I developed a passion for uncovering the stories hidden within numbers. This led me to a strong skill set in statistical analysis, machine learning, and data visualisation.
+                        </p>
+                        <p class="text-lg slate mb-4">
+                           However, I soon realised that data is most powerful when it's accessible. This drove me to learn **app development with Kotlin and React**. To complete my skillset, I studied **International Business Administration and Management at the University of Strathclyde**, ensuring I understand the strategic context behind the data.
+                        </p>
+                        <p class="text-lg slate">
+                            Now, I thrive on the challenge of the full data lifecycle: from strategic analysis to building the final user-facing application. My goal is always to create value and solve meaningful problems.
+                        </p>
+                    </div>
+                     <div class="md:w-1/3 mt-8 md:mt-0 flex justify-center">
+                        <img src="https://placehold.co/300x300/f97316/ffffff?text=MVD" alt="Manh Van Dang" class="rounded-full border-4 accent-border shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">My Toolkit</h2>
+                <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Data & Analytics</h3>
+                        <ul class="slate">
+                            <li>Python (Pandas)</li>
+                            <li>SQL</li>
+                            <li>Statistical Modelling</li>
+                            <li>Machine Learning</li>
+                        </ul>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">BI & Visualisation</h3>
+                        <ul class="slate">
+                            <li>Power BI</li>
+                            <li>Tableau</li>
+                            <li>Advanced Excel</li>
+                            <li>Data Storytelling</li>
+                        </ul>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">App & Web Dev</h3>
+                        <ul class="slate">
+                            <li>Kotlin</li>
+                            <li>React</li>
+                            <li>HTML & CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Business & Strategy</h3>
+                        <ul class="slate">
+                            <li>Business Admin</li>
+                            <li>Management</li>
+                            <li>Business Strategy</li>
+                            <li>Stakeholder Comms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">My Portfolio</h2>
+                <p class="text-center text-lg slate mb-8">A selection of projects I'm proud of.</p>
+                
+                <!-- Filter Buttons -->
+                <div id="filter-buttons" class="flex justify-center flex-wrap gap-4 mb-12">
+                     <button class="filter-btn active-filter py-2 px-4 rounded-md" data-filter="all">All</button>
+                     <button class="filter-btn text-gray-600 border border-gray-300 py-2 px-4 rounded-md hover:accent-colour hover:border-orange-500 hover:text-orange-500" data-filter="AI/ML">AI/ML</button>
+                     <button class="filter-btn text-gray-600 border border-gray-300 py-2 px-4 rounded-md hover:accent-colour hover:border-orange-500 hover:text-orange-500" data-filter="Data Analysis">Data Analysis</button>
+                     <button class="filter-btn text-gray-600 border border-gray-300 py-2 px-4 rounded-md hover:accent-colour hover:border-orange-500 hover:text-orange-500" data-filter="App Development">App Development</button>
+                     <button class="filter-btn text-gray-600 border border-gray-300 py-2 px-4 rounded-md hover:accent-colour hover:border-orange-500 hover:text-orange-500" data-filter="Web">Web</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projects will be dynamically inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 text-center">
+             <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-4 accent-colour">Get In Touch</h2>
+                <p class="text-xl slate max-w-2xl mx-auto mb-8">
+                    I'm currently seeking new opportunities and am always open to a chat. Whether you have a question or just want to say hi, my inbox is always open!
+                </p>
+                <a href="mailto:manhvandang2002@outlook.com" class="accent-colour border accent-border py-4 px-8 rounded-md text-lg hover:text-white hover:accent-bg transition duration-300 ease-in-out">
+                    Say Hello
+                </a>
+             </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="text-center py-8 border-t border-gray-200">
+        <div class="flex justify-center space-x-6 mb-4">
+             <a href="https://www.linkedin.com/in/manh-van-dang-05b681265" target="_blank" class="text-slate hover:accent-colour transition duration-300">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+            </a>
+            <a href="https://github.com/Manhwilly" target="_blank" class="text-slate hover:accent-colour transition duration-300">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+        </div>
+        <p class="slate">Built by Manh Van Dang</p>
+    </footer>
+
+
+    <script>
+        // --- DATA FOR YOUR PROJECTS ---
+        // To add a new project, just copy one of the objects below and fill in your details.
+        const projects = [
+            {
+                title: "AI Support Tool for the Elderly",
+                description: "My dissertation project. A proof-of-concept AI analytics agent, using natural language processing to provide automated insights and tech support for elderly users.",
+                tags: ["AI/ML", "Python", "Data Analysis"],
+                imageUrl: "https://placehold.co/600x400/112240/64ffda?text=AI+Project",
+                githubUrl: "#",
+                liveUrl: "#"
+            },
+            {
+                title: "Mobile Business Insights App",
+                description: "A native mobile application built with Kotlin that connects to a live database, allowing business users to view key performance indicators and sales data on the go.",
+                tags: ["App Development", "Kotlin", "Data Analysis", "SQL"],
+                imageUrl: "https://placehold.co/600x400/112240/c778dd?text=Mobile+App",
+                githubUrl: "#",
+                liveUrl: null
+            },
+            {
+                title: "Financial Analytics Tool",
+                description: "As part of the JPMorgan Chase virtual internship, I contributed to a financial analytics tool, using Python to process large datasets and Power BI to create insightful dashboards for traders.",
+                tags: ["Data Analysis", "Python", "Power BI"],
+                imageUrl: "https://placehold.co/600x400/112240/a8b2d1?text=Finance+Dashboard",
+                githubUrl: "#",
+                liveUrl: null
+            },
+            {
+                title: "Personal Portfolio Website",
+                description: "This website! A fully responsive, single-page application built with HTML, Tailwind CSS, and vanilla JavaScript to dynamically render and filter projects.",
+                tags: ["Web", "JavaScript"],
+                imageUrl: "https://placehold.co/600x400/112240/ffffff?text=Portfolio+Site",
+                githubUrl: "#",
+                liveUrl: "#"
+            },
+            {
+                title: "E-commerce Sales Dashboard",
+                description: "A comprehensive Power BI dashboard analysing sales data from an online store. Features include product performance, customer segmentation, and regional sales trends.",
+                tags: ["Data Analysis", "Power BI"],
+                imageUrl: "https://placehold.co/600x400/112240/ffc300?text=Sales+Dashboard",
+                githubUrl: "#",
+                liveUrl: "#"
+            },
+            {
+                title: "Predictive Maintenance Model",
+                description: "A machine learning model built in Python to predict equipment failure based on sensor data, helping to schedule maintenance proactively and reduce downtime.",
+                tags: ["AI/ML", "Python"],
+                imageUrl: "https://placehold.co/600x400/112240/ff5733?text=ML+Model",
+                githubUrl: "#",
+                liveUrl: null
+            }
+        ];
+
+        // --- SCRIPT TO BUILD AND FILTER THE PORTFOLIO ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectGrid = document.getElementById('project-grid');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+
+            const createProjectCard = (project) => {
+                const liveLink = project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" class="text-slate hover:accent-colour transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>` : '';
+
+                const githubLink = project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" class="text-slate hover:accent-colour transition duration-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>` : '';
+
+                return `
+                    <div class="card-bg rounded-lg overflow-hidden flex flex-col p-6" data-tags="${project.tags.join(',')}">
+                        <div class="flex justify-between items-start mb-4">
+                             <svg class="w-10 h-10 accent-colour" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                             <div class="flex space-x-4">
+                                ${githubLink}
+                                ${liveLink}
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800 hover:accent-colour transition duration-300"><a href="${project.liveUrl || project.githubUrl || '#'}">${project.title}</a></h3>
+                        <p class="slate text-md flex-grow mb-4">${project.description}</p>
+                        <div class="flex flex-wrap">
+                            ${project.tags.map(tag => `<span class="tag text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-md">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+            };
+            
+            const displayProjects = (filter) => {
+                projectGrid.innerHTML = '';
+                const filteredProjects = projects.filter(p => filter === 'all' || p.tags.includes(filter));
+                filteredProjects.forEach(project => {
+                    projectGrid.innerHTML += createProjectCard(project);
+});
+            };
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active-filter');
+                        btn.classList.add('text-gray-600', 'border-gray-300');
+                    });
+                    button.classList.add('active-filter');
+                     button.classList.remove('text-gray-600', 'border-gray-300');
+                    
+                    displayProjects(button.dataset.filter);
+                });
+            });
+
+            // Initial display
+            displayProjects('all');
+        });
+    </script>
+
+</body>
+</html>
+
