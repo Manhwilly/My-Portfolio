@@ -1,317 +1,454 @@
 <!DOCTYPE html>
-<html lang="en-GB" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manh Van Dang - Data Scientist & Analyst</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa; /* Light grey background */
-            color: #343a40; /* Dark grey text for readability */
-        }
-        .accent-colour {
-            color: #f97316; /* Professional warm orange */
-        }
-        .accent-bg {
-            background-color: #f97316;
-        }
-        .accent-border {
-            border-color: #f97316;
-        }
-        .light-slate {
-            color: #495057; /* Slightly lighter dark grey for secondary headings */
-        }
-        .slate {
-            color: #6c757d; /* Medium grey for body text */
-        }
-        .card-bg {
-            background-color: #ffffff; /* Clean white for cards */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-        }
-        .card-bg:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-        }
-        .tag {
-            background-color: #fff7ed; /* Light orange for tags */
-            color: #f97316;
-        }
-        .active-filter {
-            background-color: #f97316;
-            color: #ffffff;
-            border-color: #f97316;
-        }
-    </style>
+    <title>Manh Van Dang - Data Scientist & AI Developer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="leading-normal tracking-normal">
-
-    <!-- Header / Navbar -->
-    <header class="fixed w-full z-30 top-0 text-gray-800 bg-opacity-90 backdrop-blur-sm shadow-md" style="background-color: rgba(248, 249, 250, 0.85);">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="#">
-                <span class="text-xl accent-colour font-bold">MVD</span>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-header" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="nav-logo-text">MVD</span>
             </a>
-            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                <a href="#about" class="mr-5 hover:accent-colour transition duration-300 ease-in-out">About</a>
-                <a href="#skills" class="mr-5 hover:accent-colour transition duration-300 ease-in-out">Skills</a>
-                <a href="#portfolio" class="mr-5 hover:accent-colour transition duration-300 ease-in-out">Portfolio</a>
-                <a href="#contact" class="mr-5 hover:accent-colour transition duration-300 ease-in-out">Contact</a>
-            </nav>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#featured" class="nav-link">Featured</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </header>
+    </nav>
 
-    <main class="pt-24">
-        <!-- Hero Section -->
-        <section id="home" class="container mx-auto px-6 py-20 md:py-32">
-            <div class="max-w-4xl mx-auto text-left">
-                <p class="text-lg accent-colour mb-4">Hi, my name is</p>
-                <h1 class="text-4xl md:text-7xl font-bold text-gray-900 mb-4">Manh Van Dang.</h1>
-                <h2 class="text-4xl md:text-7xl font-bold light-slate mb-8">I build solutions with data.</h2>
-                <p class="text-lg md:text-xl max-w-3xl slate mb-8">
-                    I'm a Data Scientist with app development and business administration skills. I specialise in turning complex data into actionable insights using Python, SQL, and Power BI, while also building the applications that bring those insights to life.
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-image-container">
+                    <div class="hero-image">
+                        <div class="hero-image-placeholder">
+                            <img src="Image.jpg" alt="Profile photo" />
+                        </div>
+                        <div class="hero-image-ring">
+                            <img src="Image.jpg" alt="Profile photo ring" />
+                        </div>
+                </div>
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-greeting">Hi, I'm</span>
+                    <span class="hero-name">Manh Van Dang</span>
+                </h1>
+                <h2 class="hero-subtitle">Data Scientist & AI Developer</h2>
+                <p class="hero-description">
+                    I build end-to-end, production-ready AI systems that solve real-world business problems, from data pipeline to final application.
                 </p>
-                <a href="#portfolio" class="accent-colour border accent-border py-3 px-6 rounded-md text-lg hover:text-white hover:accent-bg transition duration-300 ease-in-out">
-                    Check out my work!
-                </a>
-            </div>
-        </section>
-
-        <!-- About Me Section -->
-        <section id="about" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
-                <div class="flex flex-col md:flex-row items-center max-w-4xl mx-auto">
-                    <div class="md:w-2/3 md:pr-12">
-                        <p class="text-lg slate mb-4">
-                            Hello! I'm Manh. My journey into the world of data began with a BSc in Data Science from Bournemouth University, where I developed a passion for uncovering the stories hidden within numbers. This led me to a strong skill set in statistical analysis, machine learning, and data visualisation.
-                        </p>
-                        <p class="text-lg slate mb-4">
-                           However, I soon realised that data is most powerful when it's accessible. This drove me to learn **app development with Kotlin and React**. To complete my skillset, I studied **International Business Administration and Management at the University of Strathclyde**, ensuring I understand the strategic context behind the data.
-                        </p>
-                        <p class="text-lg slate">
-                            Now, I thrive on the challenge of the full data lifecycle: from strategic analysis to building the final user-facing application. My goal is always to create value and solve meaningful problems.
-                        </p>
-                    </div>
-                     <div class="md:w-1/3 mt-8 md:mt-0 flex justify-center">
-                        <img src="Image.jpg" alt="Manh Van Dang" class="rounded-full border-4 accent-border shadow-lg">
-                    </div>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn--primary btn--lg">Get In Touch</a>
+                    <a href="#dashboard" class="btn btn--outline btn--lg">View My Work</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">My Toolkit</h2>
-                <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Data & Analytics</h3>
-                        <ul class="slate">
-                            <li>Python (Pandas)</li>
-                            <li>SQL</li>
-                            <li>Statistical Modelling</li>
-                            <li>Machine Learning</li>
-                        </ul>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">BI & Visualisation</h3>
-                        <ul class="slate">
-                            <li>Power BI</li>
-                            <li>Tableau</li>
-                            <li>Advanced Excel</li>
-                            <li>Data Storytelling</li>
-                        </ul>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">App & Web Dev</h3>
-                        <ul class="slate">
-                            <li>Kotlin</li>
-                            <li>React</li>
-                            <li>HTML & CSS</li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Business & Strategy</h3>
-                        <ul class="slate">
-                            <li>Business Admin</li>
-                            <li>Management</li>
-                            <li>Business Strategy</li>
-                            <li>Stakeholder Comms</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-4">My Portfolio</h2>
-                <p class="text-center text-lg slate mb-8">A selection of projects I'm proud of.</p>
-                
-                <!-- Filter Buttons -->
-                <div id="filter-buttons" class="flex justify-center flex-wrap gap-4 mb-12">
-                     <button class="filter-btn active-filter py-2 px-4 rounded-md" data-filter="all">All</button>
-                     <button class="filter-btn text-gray-600 border border-gray-300 py-2 px-4 rounded-md hover:accent-colour hover:border-orange-500 hover:text-orange-500" data-filter="AI/ML">AI/ML</button>
-                     <button class="filter-btn text-gray-600 border border-gray-300 py-2 px-4 rounded-md hover:accent-colour hover:border-orange-500 hover:text-orange-500" data-filter="Data Analysis">Data Analysis</button>
-                     <button class="filter-btn text-gray-600 border border-gray-300 py-2 px-4 rounded-md hover:accent-colour hover:border-orange-500 hover:text-orange-500" data-filter="App Development">App Development</button>
-                     <button class="filter-btn text-gray-600 border border-gray-300 py-2 px-4 rounded-md hover:accent-colour hover:border-orange-500 hover:text-orange-500" data-filter="Web">Web</button>
-                </div>
-
-                <!-- Project Grid -->
-                <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Projects will be dynamically inserted here by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 text-center">
-             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold mb-4 accent-colour">Get In Touch</h2>
-                <p class="text-xl slate max-w-2xl mx-auto mb-8">
-                    I'm currently seeking new opportunities and am always open to a chat. Whether you have a question or just want to say hi, my inbox is always open!
-                </p>
-                <a href="mailto:manhvandang2002@outlook.com" class="accent-colour border accent-border py-4 px-8 rounded-md text-lg hover:text-white hover:accent-bg transition duration-300 ease-in-out">
-                    Say Hello
-                </a>
-             </div>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="text-center py-8 border-t border-gray-200">
-        <div class="flex justify-center space-x-6 mb-4">
-             <a href="https://www.linkedin.com/in/manh-van-dang-05b681265" target="_blank" class="text-slate hover:accent-colour transition duration-300">
-                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
-            </a>
-            <a href="https://github.com/Manhwilly" target="_blank" class="text-slate hover:accent-colour transition duration-300">
-                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
         </div>
-        <p class="slate">Built by Manh Van Dang</p>
-    </footer>
+        <div class="hero-background">
+            <div class="hero-particle" style="--delay: 0s; --duration: 20s;"></div>
+            <div class="hero-particle" style="--delay: 2s; --duration: 25s;"></div>
+            <div class="hero-particle" style="--delay: 4s; --duration: 30s;"></div>
+        </div>
+    </section>
 
+    <!-- Analytics Dashboard -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Analytics Dashboard</h2>
+                <p class="section-subtitle">Key insights and metrics at a glance</p>
+            </div>
+            <div class="dashboard-grid">
+                <div class="dashboard-card dashboard-card--highlight">
+                    <div class="dashboard-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <h3 class="dashboard-card-title">Projects Completed</h3>
+                        <div class="dashboard-card-metric" id="projects-count">15+</div>
+                        <p class="dashboard-card-subtitle">End-to-end AI solutions</p>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <h3 class="dashboard-card-title">Models Deployed</h3>
+                        <div class="dashboard-card-metric">8</div>
+                        <p class="dashboard-card-subtitle">Production-ready systems</p>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6"/>
+                            <path d="m1 12 6 0m6 0 6 0"/>
+                        </svg>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <h3 class="dashboard-card-title">Data Points</h3>
+                        <div class="dashboard-card-metric">10M+</div>
+                        <p class="dashboard-card-subtitle">Successfully processed</p>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18"/>
+                            <path d="m19 9-5 5-4-4-3 3"/>
+                        </svg>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <h3 class="dashboard-card-title">Accuracy Boost</h3>
+                        <div class="dashboard-card-metric">25%</div>
+                        <p class="dashboard-card-subtitle">Average improvement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        // --- DATA FOR YOUR PROJECTS ---
-        // To add a new project, just copy one of the objects below and fill in your details.
-        const projects = [
-            {
-                title: "AI Customer Feedback Analyser",
-                description: "An end-to-end AI service that analyses customer reviews. Features a Python API (using Flask) to serve sentiment and topic models, with a live Power BI dashboard for monitoring.",
-                tags: ["AI/ML", "Python", "Data Analysis", "API Development"],
-                imageUrl: "",
-                githubUrl: "https://github.com/Manhwilly/AI-Powered-Customer-Feedback-Analyser",
-                liveUrl: "#"
-            },
-            {
-                title: "ScholarChat-AI-RAG",
-                description: "An intelligent chatbot using Retrieval-Augmented Generation (RAG) to answer questions based on a corpus of scholarly articles. Built to provide accurate, context-aware responses from scientific literature.",
-                tags: ["Python","AI", "RAG", "LLM", "Chatbot"],
-                imageUrl: "SchoolarChat-Rag.jpeg",
-                githubUrl: "https://github.com/Manhwilly/ScholarChat-AI-RAG",
-                liveUrl: null
-            },
-            {
-                title: "Financial Analytics Tool",
-                description: "As part of the JPMorgan Chase virtual internship, I contributed to a financial analytics tool, using Python to process large datasets and Power BI to create insightful dashboards for traders.",
-                tags: ["Data Analysis", "Python", "Power BI"],
-                imageUrl: "https://placehold.co/600x400/112240/a8b2d1?text=Finance+Dashboard",
-                githubUrl: "#",
-                liveUrl: null
-            },
-            {
-                title: "Personal Portfolio Website",
-                description: "This website! A fully responsive, single-page application built with HTML, Tailwind CSS, and vanilla JavaScript to dynamically render and filter projects.",
-                tags: ["Web", "JavaScript"],
-                imageUrl: "https://placehold.co/600x400/112240/ffffff?text=Portfolio+Site",
-                githubUrl: "#",
-                liveUrl: "#"
-            },
-            {
-                title: "E-commerce Sales Dashboard",
-                description: "A comprehensive Power BI dashboard analysing sales data from an online store. Features include product performance, customer segmentation, and regional sales trends.",
-                tags: ["Data Analysis", "Power BI"],
-                imageUrl: "https://placehold.co/600x400/112240/ffc300?text=Sales+Dashboard",
-                githubUrl: "#",
-                liveUrl: "#"
-            },
-            {
-                title: "Predictive Maintenance Model",
-                description: "A machine learning model built in Python to predict equipment failure based on sensor data, helping to schedule maintenance proactively and reduce downtime.",
-                tags: ["AI/ML", "Python"],
-                imageUrl: "https://placehold.co/600x400/112240/ff5733?text=ML+Model",
-                githubUrl: "#",
-                liveUrl: null
-            }
-        ];
-
-        // --- SCRIPT TO BUILD AND FILTER THE PORTFOLIO ---
-        document.addEventListener('DOMContentLoaded', () => {
-            const projectGrid = document.getElementById('project-grid');
-            const filterButtons = document.querySelectorAll('.filter-btn');
-
-            const createProjectCard = (project) => {
-                const liveLink = project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" class="text-slate hover:accent-colour transition duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>` : '';
-
-                const githubLink = project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" class="text-slate hover:accent-colour transition duration-300">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            </a>` : '';
-
-                return `
-                    <div class="card-bg rounded-lg overflow-hidden flex flex-col p-6" data-tags="${project.tags.join(',')}">
-                        <div class="flex justify-between items-start mb-4">
-                             <svg class="w-10 h-10 accent-colour" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                             <div class="flex space-x-4">
-                                ${githubLink}
-                                ${liveLink}
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Expertise across the full data science stack</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Programming</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
                             </div>
                         </div>
-                        <h3 class="text-2xl font-bold mb-2 text-gray-800 hover:accent-colour transition duration-300"><a href="${project.liveUrl || project.githubUrl || '#'}">${project.title}</a></h3>
-                        <p class="slate text-md flex-grow mb-4">${project.description}</p>
-                        <div class="flex flex-wrap">
-                            ${project.tags.map(tag => `<span class="tag text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-md">${tag}</span>`).join('')}
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">R</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Kotlin</span>
+                                <span class="skill-level">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
                         </div>
                     </div>
-                `;
-            };
-            
-            const displayProjects = (filter) => {
-                projectGrid.innerHTML = '';
-                const filteredProjects = projects.filter(p => filter === 'all' || p.tags.includes(filter));
-                filteredProjects.forEach(project => {
-                    projectGrid.innerHTML += createProjectCard(project);
-});
-            };
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">ML & AI</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Machine Learning</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">NLP</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Deep Learning</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Computer Vision</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Tools & Frameworks</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Pandas</span>
+                                <span class="skill-level">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Scikit-learn</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">TensorFlow</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PyTorch</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Visualization</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Matplotlib</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Seaborn</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Power BI</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Tableau</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    filterButtons.forEach(btn => {
-                        btn.classList.remove('active-filter');
-                        btn.classList.add('text-gray-600', 'border-gray-300');
-                    });
-                    button.classList.add('active-filter');
-                     button.classList.remove('text-gray-600', 'border-gray-300');
+    <!-- Featured Project -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Project</h2>
+                <p class="section-subtitle">Deep dive into a comprehensive case study</p>
+            </div>
+            <div class="featured-project">
+                <div class="featured-content">
+                    <div class="featured-tags">
+                        <span class="tag tag--primary">AI & Machine Learning</span>
+                        <span class="tag tag--secondary">RAG System</span>
+                    </div>
+                    <h3 class="featured-title">ScholarChat AI (RAG System)</h3>
+                    <p class="featured-intro">An end-to-end Retrieval-Augmented Generation system for academic research</p>
                     
-                    displayProjects(button.dataset.filter);
-                });
-            });
+                    <div class="featured-details">
+                        <div class="featured-detail">
+                            <h4 class="featured-detail-title">The Challenge</h4>
+                            <p>Academic researchers waste significant time sifting through dense papers to find specific, reliable information.</p>
+                        </div>
+                        <div class="featured-detail">
+                            <h4 class="featured-detail-title">My Solution</h4>
+                            <p>Engineered an end-to-end RAG system that allows users to "chat" with a knowledge base of academic papers, providing accurate, sourced answers to complex questions.</p>
+                        </div>
+                        <div class="featured-detail">
+                            <h4 class="featured-detail-title">Tech Stack</h4>
+                            <p>Python, Generative AI, RAG, Vector Databases, Flask API</p>
+                        </div>
+                        <div class="featured-detail">
+                            <h4 class="featured-detail-title">The Outcome</h4>
+                            <p>The system delivers precise, context-aware answers with source citations, dramatically reducing research time and improving the accuracy of information gathering.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-actions">
+                        <a href="https://github.com/Manhwilly/ScholarChat-AI-RAG" target="_blank" class="btn btn--primary">
+                            View on GitHub
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17l9.2-9.2M17 8v9H8"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="featured-visual">
+                    <div class="featured-image">
+                        <div class="featured-image-placeholder">
+                            <img src="ScholarChat-Rag.jpeg" alt="ScholarChat AI Interface" style="width:100%;height:100%;object-fit:cover;display:block;" />
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            // Initial display
-            displayProjects('all');
-        });
-    </script>
+    <!-- Projects Archive -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Archive</h2>
+                <p class="section-subtitle">Explore my complete portfolio of data science projects</p>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn filter-btn--active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+                <button class="filter-btn" data-filter="api">API Development</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="analytics">Analytics</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="contact-title">Let's Build Something Amazing Together</h2>
+                    <p class="contact-description">
+                        I'm currently seeking new opportunities and am always open to discussing exciting data science projects. Whether you have a question or just want to connect, I'd love to hear from you!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>manhvandang2002@outlook.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p>Connect with me professionally</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <a href="mailto:manhvandang2002@outlook.com" class="btn btn--primary btn--lg">
+                        Get In Touch
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17l9.2-9.2M17 8v9H8"/>
+                        </svg>
+                    </a>
+                    <div class="contact-social">
+                        <a href="https://www.linkedin.com/in/manh-van-dang-05b681265" target="_blank" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Manhwilly" target="_blank" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Manh Van Dang. Built with passion for data science and innovation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
-
