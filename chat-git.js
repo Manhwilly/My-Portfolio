@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const githubGrid = document.getElementById('github-repos-grid');
     const GITHUB_USERNAME = 'Manhwilly';
     // Repositories we already highlighted in Featured Projects
-    const FEATURED_REPOS = ['Nexus-Audit', 'ScholarChat-AI-RAG'];
+    const FEATURED_REPOS = ['autonomous-data-science-copilot', 'ScholarChat-AI-RAG'];
 
     const getLanguageColor = (lang) => {
         const colors = {
